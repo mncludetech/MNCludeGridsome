@@ -5,11 +5,14 @@
         <g-link to="/">{{ $static.metaData.siteName }}</g-link>
       </strong>
       <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
+        <g-link class="nav__link" to="/groups">Groups</g-link>
+        <g-link class="nav__link" to="/opportunities">Opportunities</g-link>
         <g-link class="nav__link" to="/about">About</g-link>
+        <g-link class="nav__link" to="/resources">Resources</g-link>
+        <g-link class="nav__link" to="/code-of-conduct">Code of Coduct</g-link>
       </nav>
     </header>
-    <slot/>
+    <slot />
   </div>
 </template>
 
@@ -21,12 +24,16 @@ query {
 }
 </static-query>
 
-<style>
+<style lang="scss" scoped>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
+  h1 {
+    font-size: 24px;
+  }
 }
 
 .layout {
