@@ -8,7 +8,7 @@ module.exports = {
   siteName: 'MNclude',
   plugins: [
     {
-      use: '~/src/sources',
+      use: '~/src/sources/airtable',
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
         base: process.env.AIRTABLE_BASE,
