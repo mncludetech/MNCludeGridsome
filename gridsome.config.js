@@ -5,6 +5,14 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
+  siteName: 'MNclude',
+  plugins: [
+    {
+      use: '~/src/sources',
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        base: process.env.AIRTABLE_BASE,
+      },
+    },
+  ]
 }
