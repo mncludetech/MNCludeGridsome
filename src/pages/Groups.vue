@@ -1,14 +1,37 @@
 <template>
   <Layout>
     <h1>Groups</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <template v-for="group in groups">
+      <group-thumb :key="group.node.id" :group="group" />
+    </template>
   </Layout>
 </template>
 
 <script>
+import GroupThumb from "@/components/GroupThumb.vue";
 export default {
   metaInfo: {
-    title: 'Groups'
+    title: "Groups"
+  },
+  components: { GroupThumb },
+  computed: {
+    groups() {
+      return this.$page.groups.edges;
+    }
+  }
+};
+</script>
+
+<page-query>
+query Groups{
+	groups: allAirtable {
+    edges {
+      node {
+        name
+        description
+        id
+      }
+    }
   }
 }
-</script>
+</page-query>

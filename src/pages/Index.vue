@@ -23,7 +23,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: $mn-blue;
 
   h1,
   p {
