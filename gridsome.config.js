@@ -10,7 +10,7 @@ module.exports = {
       use: '@gridsome/source-airtable',
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
-        baseId: process.env.AIRTABLE_BASE, // required
+        baseId: process.env.AIRTABLE_BASE,
         tableName: 'Resources',
         typeName: 'Resources',
         route: '/resources/:name'
@@ -20,7 +20,7 @@ module.exports = {
       use: '@gridsome/source-airtable',
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
-        baseId: process.env.AIRTABLE_BASE, // required
+        baseId: process.env.AIRTABLE_BASE,
         tableName: 'Opportunities',
         typeName: 'Opportunities',
         route: '/opportunities/:name'
@@ -30,7 +30,7 @@ module.exports = {
       use: '@gridsome/source-airtable',
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
-        baseId: process.env.AIRTABLE_BASE, // required
+        baseId: process.env.AIRTABLE_BASE,
         tableName: 'Community Organizations',
         typeName: 'Groups',
         route: '/groups/:name'
