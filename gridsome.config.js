@@ -5,14 +5,36 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'MNclude',
   plugins: [
     {
-      use: '~/src/sources/airtable',
+      use: '@gridsome/source-airtable',
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
-        base: process.env.AIRTABLE_BASE,
-      },
+        baseId: process.env.AIRTABLE_BASE, // required
+        tableName: 'Resources',
+        typeName: 'Resources',
+        route: '/resources/:name'
+      }
     },
+    {
+      use: '@gridsome/source-airtable',
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        baseId: process.env.AIRTABLE_BASE, // required
+        tableName: 'Opportunities',
+        typeName: 'Opportunities',
+        route: '/opportunities/:name'
+      }
+    },
+    {
+      use: '@gridsome/source-airtable',
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        baseId: process.env.AIRTABLE_BASE, // required
+        tableName: 'Community Organizations',
+        typeName: 'Groups',
+        route: '/groups/:name'
+      }
+    }
   ]
 }
