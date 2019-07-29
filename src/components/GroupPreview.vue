@@ -1,9 +1,12 @@
 <template>
   <div>
+    <img
+      :src='group.logo[0].url'
+      :alt='group.name'
+    />
     <h2>{{group.name}}</h2>
-    <div>{{group.description}}</div>
+    <div>{{group.description}}</div><br />
     <div>{{group.url}}</div>
-    <img :src='group.logo.pathname' />
   </div>
 </template>
 

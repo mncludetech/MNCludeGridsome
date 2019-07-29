@@ -6,13 +6,12 @@ module.exports = function (api, opts) {
   api.loadSource(async store => {
     const contentType = store.addContentType({
         typeName: 'Resources',
-        route: '/resources/:slug',
+        route: '/resources/:name'
     });
 
     await base('Resources').select().eachPage((records, fetchNextPage) => {
       records.forEach((record) => {
         const item = record._rawJson;
-        console.log('Retrieved resource:', item.fields.name)
 
         contentType.addNode({
           id: item.id,
@@ -26,7 +25,7 @@ module.exports = function (api, opts) {
   api.loadSource(async store => {
     const contentType = store.addContentType({
         typeName: 'Opportunities',
-        route: '/opportunities/:slug',
+        route: '/opportunities/:name'
     });
 
     await base('Opportunities').select().eachPage((records, fetchNextPage) => {
@@ -46,13 +45,12 @@ module.exports = function (api, opts) {
   api.loadSource(async store => {
     const contentType = store.addContentType({
         typeName: 'Groups',
-        route: '/groups/:slug',
+        route: '/groups/:name'
     });
 
     await base('Community Organizations').select().eachPage((records, fetchNextPage) => {
       records.forEach((record) => {
         const item = record._rawJson;
-        console.log('Retrieved group:', item.fields.name)
 
         contentType.addNode({
           id: item.id,

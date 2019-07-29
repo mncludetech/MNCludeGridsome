@@ -14,7 +14,12 @@
 
 <page-query>
   query Groups {
-    allGroups {
+    allGroups (perPage: 100, page: 1) {
+      pageInfo{
+        totalPages,
+        currentPage,
+        totalItems
+      }
       edges {
         node {
           id,
