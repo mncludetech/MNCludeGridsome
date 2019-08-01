@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "dotenv": "^8.0.0",
+    "@gridsome/source-airtable": "^0.1.0",
     "gridsome": "^0.6.0"
   },
   "devDependencies": {
