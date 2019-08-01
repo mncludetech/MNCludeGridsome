@@ -89,3 +89,9 @@ typings/
 
 # Temp files from running the server locally
 src/.temp
+
+dist
+
+*.log
+.cache
+.DS_Store

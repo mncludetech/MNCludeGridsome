@@ -1,40 +1,48 @@
-// This is where project configuration and plugin options are located. 
+// This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+  siteName: "MNClude",
   plugins: [
     {
-      use: '@gridsome/source-airtable',
+      use: "gridsome-plugin-sass-resources-loader",
       options: {
-        apiKey: process.env.AIRTABLE_API_KEY,
-        baseId: process.env.AIRTABLE_BASE,
-        tableName: 'Resources',
-        typeName: 'Resources',
-        route: '/resources/:name'
+        // provide path to the file with resources
+        resources: "@/assets/_globals.scss"
       }
     },
     {
-      use: '@gridsome/source-airtable',
+      use: "@gridsome/source-airtable",
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
         baseId: process.env.AIRTABLE_BASE,
-        tableName: 'Opportunities',
-        typeName: 'Opportunities',
-        route: '/opportunities/:name'
+        tableName: "Resources",
+        typeName: "Resources",
+        route: "/resources/:name"
       }
     },
     {
-      use: '@gridsome/source-airtable',
+      use: "@gridsome/source-airtable",
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
         baseId: process.env.AIRTABLE_BASE,
-        tableName: 'Community Organizations',
-        typeName: 'Groups',
-        route: '/groups/:name'
+        tableName: "Opportunities",
+        typeName: "Opportunities",
+        route: "/opportunities/:name"
+      }
+    },
+    {
+      use: "@gridsome/source-airtable",
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        baseId: process.env.AIRTABLE_BASE,
+        tableName: "Community Organizations",
+        typeName: "Groups",
+        route: "/groups/:name"
       }
     }
   ]
-}
+};

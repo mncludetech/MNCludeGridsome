@@ -44,7 +44,26 @@ export default {
     GroupPreview
   },
   metaInfo: {
-    title: 'Groups'
+    title: "Groups"
+  },
+  computed: {
+    groups() {
+      return this.$page.groups.edges;
+    }
+  }
+};
+</script>
+
+<page-query>
+query Groups{
+	groups: allAirtable {
+    edges {
+      node {
+        name
+        description
+        id
+      }
+    }
   }
 }
-</script>
+</page-query>

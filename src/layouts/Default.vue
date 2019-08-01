@@ -1,9 +1,9 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
+      <g-link to="/">
+        <g-image alt="MNclude logo" src="../../static/MNclude_logo.png" width="135" />
+      </g-link>
       <nav class="nav">
         <g-link class="nav__link" to="/groups">Groups</g-link>
         <g-link class="nav__link" to="/opportunities">Opportunities</g-link>
@@ -24,20 +24,29 @@ query {
 }
 </static-query>
 
-<style lang="scss" scoped>
+<style lang="scss">
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: "Nunito", "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  color: $mn-font;
   h1 {
     font-size: 24px;
   }
 }
 
+a {
+  text-decoration: none;
+  color: $mn-font;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .layout {
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
