@@ -10,6 +10,6 @@ export default function(Vue, { router, head, isClient }) {
   head.link.push({
     rel: "stylesheet",
     href:
-      "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap"
+      "https://fonts.googleapis.com/css?family=Nunito:400,400i,900&display=swap"
   });
 }

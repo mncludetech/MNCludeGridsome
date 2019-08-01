@@ -26,8 +26,7 @@ query {
 
 <style lang="scss">
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-    "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Nunito", "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
