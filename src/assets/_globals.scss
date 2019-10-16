@@ -1,6 +1,8 @@
 //Colors
 $mn-font: #213243;
-$mn-blue: #2175c9;
+$mn-blue: #167d9a;
+$mn-blue-transparent: #167d9aa3;
+$mn-yellow: rgb(171, 190, 3);
 
 // Responsive Mixins
 @mixin respond-to($breakpoint) {
@@ -22,4 +24,9 @@ $mn-blue: #2175c9;
       @content;
     }
   }
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 1024px;
 }

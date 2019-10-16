@@ -3,6 +3,7 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import "@/assets/_globals.scss";
+import VueMasonry from "vue-masonry-css";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -12,4 +13,5 @@ export default function(Vue, { router, head, isClient }) {
     href:
       "https://fonts.googleapis.com/css?family=Nunito:400,400i,900&display=swap"
   });
+  Vue.use(VueMasonry);
 }

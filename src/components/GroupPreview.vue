@@ -1,13 +1,9 @@
 <template>
-  <div>
-    <img
-      v-if="group.logo[0]"
-      :src='group.logo[0].url'
-      :alt='group.name'
-    />
-    <h2>{{group.name}}</h2>
-    <div>{{group.description}}</div><br />
-    <div v-if="group.url">{{group.url}}</div>
+  <div class="container">
+    <h2>
+      <a :href="group.url">{{group.name}}</a>
+    </h2>
+    <p>{{group.description}}</p>
   </div>
 </template>
 
@@ -17,5 +13,34 @@ export default {
   props: {
     group: null
   }
-}
+};
 </script>
+
+<style lang="scss" scoped>
+.container {
+  position: relative;
+  margin: 20px 0px;
+
+  img {
+    width: 100%;
+  }
+}
+
+a {
+  color: $mn-blue;
+}
+
+p,
+h2 {
+  margin: 5px 0px;
+}
+
+.image-container {
+  height: 100px;
+  width: 200px;
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+</style>
