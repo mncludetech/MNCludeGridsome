@@ -46,10 +46,7 @@ a {
 }
 
 .layout {
-  max-width: 960px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .header {
@@ -58,6 +55,8 @@ a {
   align-items: center;
   margin-bottom: 20px;
   height: 80px;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .nav__link {

@@ -1,13 +1,14 @@
 <template>
   <Layout>
-    <h1>Groups</h1>
-    <section>
-      <GroupPreview
-        v-for="edge in $page.allGroups.edges"
-        :key="edge.node.id"
-        :to="edge.node.path"
-        :group="edge.node"
-      />
+    <section class="content-container">
+      <masonry :cols="2" :gutter="100">
+        <GroupPreview
+          v-for="edge in $page.allGroups.edges"
+          :key="edge.node.id"
+          :to="edge.node.path"
+          :group="edge.node"
+        />
+      </masonry>
     </section>
   </Layout>
 </template>
@@ -37,7 +38,7 @@
 </page-query>
 
 <script>
-import GroupPreview from '../components/GroupPreview';
+import GroupPreview from "../components/GroupPreview";
 
 export default {
   components: {
@@ -67,3 +68,9 @@ query Groups{
   }
 }
 </page-query>
+
+<style lang="scss" scoped>
+.content-container {
+  max-width: 1024px;
+}
+</style>
