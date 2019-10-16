@@ -1,14 +1,9 @@
 <template>
   <div class="container">
-    <div
-      v-if="group.logo[0]"
-      class="image-container"
-      :style="{ backgroundImage: 'url(' + group.logo[0].url + ')' }"
-    ></div>
-    <h2>{{group.name}}</h2>
-    <div>{{group.description}}</div>
-    <br />
-    <div v-if="group.url">{{group.url}}</div>
+    <h2>
+      <a :href="group.url">{{group.name}}</a>
+    </h2>
+    <p>{{group.description}}</p>
   </div>
 </template>
 
@@ -29,6 +24,15 @@ export default {
   img {
     width: 100%;
   }
+}
+
+a {
+  color: $mn-blue;
+}
+
+p,
+h2 {
+  margin: 5px 0px;
 }
 
 .image-container {

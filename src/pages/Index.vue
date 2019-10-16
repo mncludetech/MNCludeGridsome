@@ -42,7 +42,7 @@ export default {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(2, 16, 164, 0.538);
+    background-color: $mn-blue-transparent;
   }
 
   p {
